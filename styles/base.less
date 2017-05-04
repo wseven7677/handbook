@@ -1,5 +1,9 @@
 @import "textor.less";
 @import "displayer.less";
+@import "bbs.less";
+@import "poem.less";
+@import "info.less";
+@import "login.less";
 
 *{
   padding: 0;
@@ -15,6 +19,13 @@ nav{
     li{
       display: inline-block;
       padding: 0 10px 0 10px;
+    }
+    a{
+      text-decoration: none;
+      color: inherit;
+      &:hover{
+        color: orange;
+      }
     }
     .brand{
       margin-right: 40px;

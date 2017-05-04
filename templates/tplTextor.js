@@ -1,1 +1,0 @@
-<textarea><%= yo%></textarea>

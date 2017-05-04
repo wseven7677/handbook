@@ -17,20 +17,16 @@
       <nav>
         <ul>
           <li class="brand">brand</li>
-          <li class="titleItem active">myhandbook</li>
-          <li class="titleItem">square</li>
-          <li class="account">account</li>
+          <li class="titleItem active"><a href="#book">内容</a></li>
+          <li class="titleItem"><a href="#square">广场</a></li>
+          <li class="account"><a href="#account">请登录</a></li>
         </ul>
       </nav>
     </header>
-    <div id="content">
-      
-    </div>
+    <div id="content"></div>
     <footer>2017 @ handbook</footer>
-    <script src="templates/tplTextor.js" type="text/template" id="tplTextor"></script>
-    <script src="templates/tplDisplayer.js" type="text/template" id="tplDisplayer"></script>
     <script type="text/javascript">
-      require(['scripts/main']);
+      require(['scripts/main'+'.js?'+Math.random()]);
     </script>
   </body>
 </html>
