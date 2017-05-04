@@ -1,4 +1,5 @@
-define(function(){
+define(function(require){
+  var judge = require('scripts/judge');
   return {
     initialize: function(){
       //创建元素：
@@ -8,8 +9,14 @@ define(function(){
         if (!$("#idInput").val() || !$("#pwInput").val()){
           $("#warnText").html("空着没办法登录。");
         }else{
-          sessionStorage.setItem("flagLogin",$("#idInput").val());
-          location.reload();
+          var userInfo = judge($("#idInput").val());
+          if(userInfo.flag){
+            sessionStorage.setItem("flagLogin",userInfo.iden);
+            sessionStorage.setItem("flagSig",userInfo.sig);
+            location.reload();
+          }else{
+            $("#warnText").html("登录失败。");
+          }
         }
       });
       //渲染：

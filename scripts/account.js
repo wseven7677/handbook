@@ -1,9 +1,9 @@
 define(function(require){
 
-  var login = require('scripts/account/login');
-  var info = require('scripts/account/info');
+  var login = require('scripts/account/login');//登录界面
+  var info = require('scripts/account/info');//已登录的用户界面
 
-  var flagLogin = sessionStorage.getItem("flagLogin");
+  var flagLogin = sessionStorage.getItem("flagLogin");//获取登录标志，也是name
   return {
     //初始化
     initialize: function(){

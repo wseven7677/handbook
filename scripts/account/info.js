@@ -10,8 +10,9 @@ define(function(){
     },
     render: function(){
       var flagLogin = sessionStorage.getItem("flagLogin");
+      var flagSig = sessionStorage.getItem("flagSig");
       $("#iden").html("帐号："+flagLogin);
-      $("#sig").html("签名："+"...");
+      $("#sig").html("签名："+flagSig);
     },
     create: function(){
       this.$el.append($("<div id='iden'>帐号：</div>"));

@@ -1,10 +1,9 @@
 define(function(require){
   //引入文件：
-  require('scripts/session');
 
   var book = require('scripts/book');
   var square = require('scripts/square');
-  var account = require('scripts/account');
+  var account = require('scripts/account.js?11');
 
   var Book = Backbone.View.extend(book);
   var Square = Backbone.View.extend(square);
